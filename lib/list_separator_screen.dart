@@ -14,7 +14,13 @@ class ListSeparatorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('List View Separated')),
+      appBar: AppBar(
+          leading: IconButton(
+              icon: Icon(Icons.chevron_left),
+              onPressed: () {
+                Navigator.pop(context);
+              }),
+          title: Text('List View Separated')),
       body: ListView.separated(
           itemBuilder: (BuildContext context, int index) {
             return Container(

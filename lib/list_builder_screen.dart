@@ -15,6 +15,11 @@ class ListBuilderScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.chevron_left),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
         title: Text('List View Builder'),
       ),
       body: ListView.builder(
