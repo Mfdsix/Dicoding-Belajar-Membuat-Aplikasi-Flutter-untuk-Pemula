@@ -5,6 +5,7 @@ import 'package:first_app/list_builder_screen.dart';
 import 'package:first_app/list_separator_screen.dart';
 import 'package:first_app/expanded_screen.dart';
 import 'package:first_app/expanded_flexible_screen.dart';
+import 'package:first_app/send_data_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -32,6 +33,10 @@ class HomeScreen extends StatelessWidget {
             NavigatorButton(
                 title: "Expanded Flexible Screen",
                 destination: ExpandedFlexibleScreen()),
+            NavigatorButton(
+                title: "Send Message Screen",
+                destination:
+                    SendDataScreen(message: "message from home screen")),
           ],
         ),
       ),
