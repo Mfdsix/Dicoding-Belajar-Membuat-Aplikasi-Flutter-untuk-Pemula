@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:first_app/detail_screen.dart';
-import 'package:first_app/list_screen.dart';
-import 'package:first_app/list_builder_screen.dart';
-import 'package:first_app/list_separator_screen.dart';
-import 'package:first_app/expanded_screen.dart';
-import 'package:first_app/expanded_flexible_screen.dart';
-import 'package:first_app/send_data_screen.dart';
-import 'package:first_app/media_query_screen.dart';
+import 'package:first_app/screen/detail_screen.dart';
+import 'package:first_app/screen/list_screen.dart';
+import 'package:first_app/screen/list_builder_screen.dart';
+import 'package:first_app/screen/list_separator_screen.dart';
+import 'package:first_app/screen/expanded_screen.dart';
+import 'package:first_app/screen/expanded_flexible_screen.dart';
+import 'package:first_app/screen/send_data_screen.dart';
+import 'package:first_app/screen/media_query_screen.dart';
+import 'package:first_app/screen/layout_builder_screen.dart';
+import 'package:first_app/screen/responsive_screen.dart';
+import 'package:first_app/screen/place/place_list_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -39,9 +42,16 @@ class HomeScreen extends StatelessWidget {
                     SendDataScreen(message: "message from home screen")),
             NavigatorButton(
                 title: "Media Query Screen", destination: MediaQueryScreen()),
+            NavigatorButton(
+                title: "Layout Builder Screen",
+                destination: LayoutBuilderScreen()),
+            NavigatorButton(
+                title: "Responsive Screen", destination: ResponsiveScreen()),
             Title(title: "Implementation"),
             NavigatorButton(
                 title: "Detail Screen", destination: DetailScreen()),
+            NavigatorButton(
+                title: "Places Screen", destination: PlaceListScreen()),
           ],
         ),
       ),
