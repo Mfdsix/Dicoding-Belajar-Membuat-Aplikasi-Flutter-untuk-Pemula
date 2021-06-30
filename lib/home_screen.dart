@@ -6,6 +6,7 @@ import 'package:first_app/list_separator_screen.dart';
 import 'package:first_app/expanded_screen.dart';
 import 'package:first_app/expanded_flexible_screen.dart';
 import 'package:first_app/send_data_screen.dart';
+import 'package:first_app/media_query_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -36,6 +37,8 @@ class HomeScreen extends StatelessWidget {
                 title: "Send Message Screen",
                 destination:
                     SendDataScreen(message: "message from home screen")),
+            NavigatorButton(
+                title: "Media Query Screen", destination: MediaQueryScreen()),
             Title(title: "Implementation"),
             NavigatorButton(
                 title: "Detail Screen", destination: DetailScreen()),
@@ -81,7 +84,7 @@ class Title extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 15.0),
       child: Column(
         children: [
-          Text("Implementation",
+          Text(title,
               textAlign: TextAlign.center, style: TextStyle(fontSize: 20)),
           Divider(),
         ],
