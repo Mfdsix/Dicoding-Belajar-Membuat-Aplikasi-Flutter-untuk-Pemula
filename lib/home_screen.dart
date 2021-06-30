@@ -18,8 +18,7 @@ class HomeScreen extends StatelessWidget {
         padding: EdgeInsets.all(20.0),
         child: ListView(
           children: [
-            NavigatorButton(
-                title: "Detail Screen", destination: DetailScreen()),
+            Title(title: "Basic"),
             NavigatorButton(
                 title: "List View Screen", destination: ListScreen()),
             NavigatorButton(
@@ -37,6 +36,9 @@ class HomeScreen extends StatelessWidget {
                 title: "Send Message Screen",
                 destination:
                     SendDataScreen(message: "message from home screen")),
+            Title(title: "Implementation"),
+            NavigatorButton(
+                title: "Detail Screen", destination: DetailScreen()),
           ],
         ),
       ),
@@ -64,6 +66,25 @@ class NavigatorButton extends StatelessWidget {
             return destination;
           }));
         },
+      ),
+    );
+  }
+}
+
+class Title extends StatelessWidget {
+  final String title;
+  const Title({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 15.0),
+      child: Column(
+        children: [
+          Text("Implementation",
+              textAlign: TextAlign.center, style: TextStyle(fontSize: 20)),
+          Divider(),
+        ],
       ),
     );
   }
