@@ -1,6 +1,6 @@
 {
-    "name": "first_app",
-    "short_name": "first_app",
+    "name": "First App",
+    "short_name": "FA",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
